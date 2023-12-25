@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class DBConnector {
 
@@ -13,7 +12,7 @@ public static Connection getConnetor() throws Exception {
 		String user="user01";
 		String password="user01";
 //		String url="3.36.131.0:1521"
-		String url="jdbc:oracle:thin:@3.36.131.0:1521:xe";
+		String url="jdbc:oracle:thin:@3.38.93.244:1521:xe";
 		String driver="oracle.jdbc.driver.OracleDriver";
 		
 			//1.driver를 메모리에 로딩(객체생성) to loaded dirver at memory; 

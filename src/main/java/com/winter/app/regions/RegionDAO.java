@@ -13,7 +13,7 @@ public class RegionDAO {
 	
 		public RegionDTO getDetail(RegionDTO regionDTO) throws Exception {
 			Connection con = DBConnector.getConnetor();
-			String sql = "SELECT * FROM REGION WHERE REGIONS_ID=? ";//+regionDTO.getRegion_id();
+			String sql = "SELECT * FROM REGIONS WHERE REGION_ID=? ";//+regionDTO.getRegion_id();
 			
 			PreparedStatement st = con.prepareStatement(sql);
 			
@@ -25,8 +25,8 @@ public class RegionDAO {
 						
 			if(rs.next()) {
 				resultDTO = new RegionDTO();
-				resultDTO.setRegion_id(rs.getInt("REGIONS_ID"));
-				resultDTO.setRegion_name(rs.getString("REGIONS_NAME"));
+				resultDTO.setRegion_id(rs.getInt("REGION_ID"));
+				resultDTO.setRegion_name(rs.getString("REGION_NAME"));
 			}
 			
 			return resultDTO;   
