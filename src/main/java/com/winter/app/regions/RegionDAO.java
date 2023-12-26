@@ -11,7 +11,42 @@ import com.winter.app.util.DBConnector;
 
 public class RegionDAO {
 	
+	
+		//update
+		public int update(RegionDTO regionDTO) throws Exception {
+			Connection con = DBConnector.getConnetor();
+			
+			String sql = "UPDATE REGIONS SET REGION_NAME=? WHERE REGION_ID =?";
+			PreparedStatement st =con.prepareStatement(sql);
+			
+			st.setString(1, regionDTO.getRegion_name());
+			st.setInt(2, regionDTO.getRegion_id());
+			
+			int result = st.executeUpdate();
+			return result;
+		}
+	
+	
+		public int add(RegionDTO regionDTO) throws Exception {
+			Connection con = DBConnector.getConnetor();
+			
+			String sql = "INSERT INTO REGIONS VALUES (?,?)";
+			
+			PreparedStatement st = con.prepareStatement(sql);
+			
+			st.setInt(1, regionDTO.getRegion_id());
+			st.setString(2, regionDTO.getRegion_name());
+			
+			int result = st.executeUpdate();
+			
+//			dbconnerpt
+			return result;
+		}
+	
 		public RegionDTO getDetail(RegionDTO regionDTO) throws Exception {
+			//정보선선 DB연결
+						
+			
 			Connection con = DBConnector.getConnetor();
 			String sql = "SELECT * FROM REGIONS WHERE REGION_ID=? ";//+regionDTO.getRegion_id();
 			

@@ -10,7 +10,31 @@ import com.winter.app.util.DBConnector;
 
 public class EmployeesDAO {
 
-	public List<EmployeesDTO> list(EmployeesDTO employeesDTO) throws Exception {
+	
+	//하나조회
+
+	public EmployeesDTO getDitail(EmployeesDTO employeesDTO) throws Exception {
+		Connection con = DBConnector.getConnetor();
+		String sql = "SELECT * FROM EMPLOYEES WHERE EMPLOYEE_ID=?";
+		PreparedStatement st = con.prepareStatement(sql);
+		st.setInt(1, employeesDTO.getDEPARTMENT_ID());
+		ResultSet rs = st.executeQuery();		
+					
+		if(rs.next()) {
+			employeesDTO.setFIRST_NAME(rs.getString("FIRST_NAME"));
+		}else {
+			employeesDTO=null;
+		}
+		DBConnector.disConnect(rs, st, con);
+		
+		return employeesDTO;
+		
+		
+	}
+	
+	
+	
+	public List<EmployeesDTO> list() throws Exception {
 		
 		Connection con = DBConnector.getConnetor();
 		String sql = "SELECT * FROM EMPLOYEES";
@@ -21,7 +45,7 @@ public class EmployeesDAO {
 		
 		while(rs.next()) {
 			EmployeesDTO temp = new EmployeesDTO();
-			temp.setEMPLOYEE_ID(rs.getInt(1));
+			temp.setEMPLOYEE_ID(rs.getInt("EMPLOYEE_ID"));
 			temp.setFIRST_NAME(rs.getString(2));
 			temp.setLAST_NAME(rs.getString(3));
 			temp.setEMAIL(rs.getString(4));

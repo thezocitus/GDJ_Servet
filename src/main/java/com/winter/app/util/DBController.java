@@ -40,7 +40,7 @@ public class DBController {
 				case 1:
 					DepartmentDTO departmentDTO = new DepartmentDTO();
 					try {
-						List<DepartmentDTO> ar = departmentDAO.getList(departmentDTO);
+						List<DepartmentDTO> ar = departmentDAO.getList();
 						view.departmentView(ar);
 					} catch (Exception e1) {
 						// TODO Auto-generated catch block
@@ -95,7 +95,7 @@ public class DBController {
 					EmployeesDTO employeesDTO = new EmployeesDTO();
 					
 					try {
-						List<EmployeesDTO> ar = employeesDAO.list(employeesDTO);
+						List<EmployeesDTO> ar = employeesDAO.list();
 						view.employeesView(ar);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
