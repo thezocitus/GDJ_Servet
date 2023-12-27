@@ -2,50 +2,52 @@ package com.winter.app.locations;
 
 public class LocationsDTO {
 
-	private int LOCATION_ID;
-	private String SSTREET_ADDRESS;
-	private String POSTAL_CODE;
-	private String CITY;
-	private String STATE_PROVINCE;
-	private String COUNTRY_ID;
+	private int location_id;
+	private String street_address;
+	private String postal_code;
+	private String city;
+	private String state_province;
+	private String county_id;
 	
 	
-	public int getLOCATION_ID() {
-		return LOCATION_ID;
-	}
-	public void setLOCATION_ID(int lOCATION_ID) {
-		LOCATION_ID = lOCATION_ID;
-	}
-	public String getSSTREET_ADDRESS() {
-		return SSTREET_ADDRESS;
-	}
-	public void setSSTREET_ADDRESS(String sSTREET_ADDRESS) {
-		SSTREET_ADDRESS = sSTREET_ADDRESS;
-	}
-	public String getPOSTAL_CODE() {
-		return POSTAL_CODE;
-	}
-	public void setPOSTAL_CODE(String pOSTAL_CODE) {
-		POSTAL_CODE = pOSTAL_CODE;
-	}
-	public String getCITY() {
-		return CITY;
-	}
-	public void setCITY(String cITY) {
-		CITY = cITY;
-	}
-	public String getSTATE_PROVINCE() {
-		return STATE_PROVINCE;
-	}
-	public void setSTATE_PROVINCE(String sTATE_PROVINCE) {
-		STATE_PROVINCE = sTATE_PROVINCE;
-	}
-	public String getCOUNTRY_ID() {
-		return COUNTRY_ID;
-	}
-	public void setCOUNTRY_ID(String cOUNTRY_ID) {
-		COUNTRY_ID = cOUNTRY_ID;
-	}
 	
+	public int getLocation_id() {
+		return location_id;
+	}
+	public void setLocation_id(int location_id) {
+		this.location_id = location_id;
+	}
+	public String getStreet_address() {
+		return street_address;
+	}
+	public void setStreet_address(String street_address) {
+		this.street_address = street_address;
+	}
+	public String getPostal_code() {
+		return postal_code;
+	}
+	public void setPostal_code(String postal_code) {
+		this.postal_code = postal_code;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState_province() {
+		return state_province;
+	}
+	public void setState_province(String state_province) {
+		this.state_province = state_province;
+	}
+	public String getCounty_id() {
+		return county_id;
+	}
+	public void setCounty_id(String county_id) {
+		this.county_id = county_id;
+	}
 	
 }
+	
+	

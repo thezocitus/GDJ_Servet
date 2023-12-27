@@ -10,7 +10,7 @@ import com.winter.app.util.DBConnector;
 
 public class LocationsDAO {
 
-	public List<LocationsDTO> list(LocationsDTO locationsDTO) throws Exception {
+	public List<LocationsDTO> getList() throws Exception {
 		
 		Connection con = DBConnector.getConnetor();
 		
@@ -21,12 +21,13 @@ public class LocationsDAO {
 		List<LocationsDTO> ar = new ArrayList<LocationsDTO>();
 		while(rs.next()) {
 			LocationsDTO temp = new LocationsDTO();
-			temp.setLOCATION_ID(rs.getInt("LOCATION_ID"));
-			temp.setSSTREET_ADDRESS(rs.getString("STREET_ADDRESS"));
-			temp.setPOSTAL_CODE(rs.getString("POSTAL_CODE"));
-			temp.setCITY(rs.getString(4));
-			temp.setSTATE_PROVINCE(rs.getString(5));
-			temp.setCOUNTRY_ID(rs.getString(6));
+			System.out.println(temp);
+			temp.setLocation_id(rs.getInt("location_id"));
+			temp.setStreet_address(rs.getString("street_address"));
+			temp.setPostal_code(rs.getString("postal_code"));
+			temp.setCity(rs.getString("city"));
+			temp.setState_province(rs.getString("state_province"));
+			temp.setCounty_id(rs.getString("country_id"));
 			
 			ar.add(temp);
 		}
