@@ -21,21 +21,21 @@ departmentDTO=departmentDAO.getdetail(departmentDTO);
 </head>
 <body>
 	<h1>department update</h1>>
-	<form action="./addProcess.jsp">
+	<form action="./updateProcess.jsp">
 	
 	<div>
-		department_id<input type="text" readonly="readonly" name="department_id" value="<%= departmentDTO.getDepartment_id()%>">
+		department_id<input type="text"  name="department_id" value="<%= departmentDTO.getDepartment_id()%>">
 	</div>
 	<div>
 		department_name<input type='text' name='department_name' value="<%= departmentDTO.getDepartment_name()%>">;
 	</div>
 	<div>
-		manager_id<input type='text' name='manager_id' value="<%= departmentDTO.getManager_id()%>">;
+		manager_id<input type='text'  name='manager_id' value="<%= departmentDTO.getManager_id()%>">;
 	</div>
 	<div>
 		location_id<input type='text' name='location_id' value="<%=departmentDTO.getLocation_id()%>">;
 	</div>
-	<button>추가</button>	
+	<button>수정</button>	
 	</form>
 	
 </body>

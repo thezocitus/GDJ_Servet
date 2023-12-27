@@ -40,7 +40,7 @@ public class View {
 	}
 	public void employeesView(List<EmployeesDTO> ar) {
 		for(EmployeesDTO employeesDTO : ar) {
-			System.out.println(employeesDTO.getEMPLOYEE_ID()+" : "+employeesDTO.getFIRST_NAME()+" : "+employeesDTO.getLAST_NAME()+" : "+employeesDTO.getEMAIL()+" : "+employeesDTO.getPHONE_NUMBER()+" : "+employeesDTO.getHIRE_DATE()+" : "+employeesDTO.getJOB_ID()+" : "+employeesDTO.getSALARY()+" : "+employeesDTO.getCOMMISSION_PCT()+" : "+employeesDTO.getMANAGER_ID()+" : "+employeesDTO.getDEPARTMENT_ID());
+			System.out.println(employeesDTO.getemployee_id()+" : "+employeesDTO.getfirst_name()+" : "+employeesDTO.getlast_name()+" : "+employeesDTO.getemail()+" : "+employeesDTO.getphone_number()+" : "+employeesDTO.gethire_date()+" : "+employeesDTO.getjob_id()+" : "+employeesDTO.getsalary()+" : "+employeesDTO.getcommission_pct()+" : "+employeesDTO.getmanager_id()+" : "+employeesDTO.getdepartment_id());
 		}
 	}
 	

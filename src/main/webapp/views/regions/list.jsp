@@ -33,8 +33,8 @@
 					<td><a href="./detail.jsp?region_id=<%= regionDTO.getRegion_id()%>"><%= regionDTO.getRegion_name()%></a></td>
 				</tr>				
 			<% }%>
-			<a href="./add.jsp">add</a>
 		</tbody>
+			<a href="./add.jsp">add</a>
 		
 	</table>
 

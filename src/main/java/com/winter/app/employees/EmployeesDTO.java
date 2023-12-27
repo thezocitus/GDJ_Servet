@@ -1,87 +1,88 @@
 package com.winter.app.employees;
 
+import java.sql.Date;
 import java.util.Calendar;
 
 public class EmployeesDTO {
 
-	private int EMPLOYEE_ID;	
-	private String FIRST_NAME;	
-	private String LAST_NAME;	
-	private String EMAIL;	
-	private String PHONE_NUMBER;
-	private String HIRE_DATE;
-	private String JOB_ID;
-	private int SALARY;
-	private double COMMISSION_PCT;
-	private int MANAGER_ID;
-	private int DEPARTMENT_ID;
+	private int employee_id;	
+	private String first_name;	
+	private String last_name;	
+	private String email;	
+	private String phone_number;
+	private Date hire_date;	
+	private String job_id;
+	private Double salary;
+	private Double commission_pct;
+	private int manager_id;
+	private int department_id;
 	
 	
 	
-	public int getEMPLOYEE_ID() {
-		return EMPLOYEE_ID;
+	public int getemployee_id() {
+		return employee_id;
 	}
-	public void setEMPLOYEE_ID(int eMPLOYEE_ID) {
-		EMPLOYEE_ID = eMPLOYEE_ID;
+	public void setemployee_id(int employee_id) {
+		employee_id = employee_id;
 	}
-	public String getFIRST_NAME() {
-		return FIRST_NAME;
+	public String getfirst_name() {
+		return first_name;
 	}
-	public void setFIRST_NAME(String fIRST_NAME) {
-		FIRST_NAME = fIRST_NAME;
+	public void setfirst_name(String first_name) {
+		first_name = first_name;
 	}
-	public String getLAST_NAME() {
-		return LAST_NAME;
+	public String getlast_name() {
+		return last_name;
 	}
-	public void setLAST_NAME(String lAST_NAME) {
-		LAST_NAME = lAST_NAME;
+	public void setlast_name(String last_name) {
+		last_name = last_name;
 	}
-	public String getEMAIL() {
-		return EMAIL;
+	public String getemail() {
+		return email;
 	}
-	public void setEMAIL(String eMAIL) {
-		EMAIL = eMAIL;
+	public void setemail(String email) {
+		email = email;
 	}
-	public String getPHONE_NUMBER() {
-		return PHONE_NUMBER;
+	public String getphone_number() {
+		return phone_number;
 	}
-	public void setPHONE_NUMBER(String pHONE_NUMBER) {
-		PHONE_NUMBER = pHONE_NUMBER;
+	public void setphone_number(String phone_number) {
+		phone_number = phone_number;
 	}
-	public String getHIRE_DATE() {
-		return HIRE_DATE;
+	public Date gethire_date() {
+		return hire_date;
 	}
-	public void setHIRE_DATE(String hIRE_DATE) {
-		HIRE_DATE = hIRE_DATE;
+	public void sethire_date(Date hire_date) {
+		hire_date = hire_date;
 	}
-	public String getJOB_ID() {
-		return JOB_ID;
+	public String getjob_id() {
+		return job_id;
 	}
-	public void setJOB_ID(String jOB_ID) {
-		JOB_ID = jOB_ID;
+	public void setjob_id(String job_id) {
+		job_id = job_id;
 	}
-	public int getSALARY() {
-		return SALARY;
+	public Double getsalary() {
+		return salary;
 	}
-	public void setSALARY(int sALARY) {
-		SALARY = sALARY;
+	public void setsalary(double d) {
+		d = d;
 	}
-	public double getCOMMISSION_PCT() {
-		return COMMISSION_PCT;
+	public double getcommission_pct() {
+		return commission_pct;
 	}
-	public void setCOMMISSION_PCT(double cOMMISSION_PCT) {
-		COMMISSION_PCT = cOMMISSION_PCT;
+	public void setcommission_pct(double commission_pct) {
+		commission_pct = commission_pct;
 	}
-	public int getMANAGER_ID() {
-		return MANAGER_ID;
+	public int getmanager_id() {
+		return manager_id;
 	}
-	public void setMANAGER_ID(int mANAGER_ID) {
-		MANAGER_ID = mANAGER_ID;
+	public void setmanager_id(int manager_id) {
+		manager_id = manager_id;
 	}
-	public int getDEPARTMENT_ID() {
-		return DEPARTMENT_ID;
+	public int getdepartment_id() {
+		return department_id;
 	}
-	public void setDEPARTMENT_ID(int dEPARTMENT_ID) {
-		DEPARTMENT_ID = dEPARTMENT_ID;
+	public void setdepartment_id(int department_id) {
+		department_id = department_id;
 	}
 }
