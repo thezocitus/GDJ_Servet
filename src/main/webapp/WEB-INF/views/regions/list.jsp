@@ -5,11 +5,17 @@
     pageEncoding="UTF-8"%>
 <%
 	//java 구역 - 스크립틀릿
-	RegionDAO regionDAO = new RegionDAO();
+	/* RegionDAO regionDAO = new RegionDAO();
 	//RegionDTO regionDTO = new RegionDTO();	
-	List<RegionDTO> ar =regionDAO.getList();
+	List<RegionDTO> ar =regionDAO.getList(); */
+	
+	//request 변수명
+	
+	 List<RegionDTO> ar =(List<RegionDTO>)request.getAttribute("list");
+	
 	
 %>
+${requestScope.list}
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,11 +32,11 @@
 			</tr>			
 		</thead>
 		
-		<tbody>		
+		<tbody>	
 			<% for(RegionDTO regionDTO:ar){%>
 				<tr>
 					<td><%= regionDTO.getRegion_id() %></td>
-					<td><a href="./detail.jsp?region_id=<%= regionDTO.getRegion_id()%>"><%= regionDTO.getRegion_name()%></a></td>
+					<td><a href="./detail?region_id=<%= regionDTO.getRegion_id()%>"><%= regionDTO.getRegion_name()%></a></td>
 				</tr>				
 			<% }%>
 		</tbody>
